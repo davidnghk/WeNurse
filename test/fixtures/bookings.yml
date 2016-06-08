@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  start_datetime: 2016-05-20 10:05:00
+  end_datetime: 2016-05-20 10:05:00
+  pickup_location_id: 
+  dropoff_location_id: 
+  trip_type: 1
+  helper_class: 1
+  hourly_rate: 1
+  total_fee: 9.99
+  server_id: 
+  status: 1
+
+two:
+  user_id: 
+  start_datetime: 2016-05-20 10:05:00
+  end_datetime: 2016-05-20 10:05:00
+  pickup_location_id: 
+  dropoff_location_id: 
+  trip_type: 1
+  helper_class: 1
+  hourly_rate: 1
+  total_fee: 9.99
+  server_id: 
+  status: 1

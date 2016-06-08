@@ -1,0 +1,83 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  duration: "Dur."
+  hours: " hr"
+  home: "Home"
+  Booking: "Booking"
+  List_Booking: "List Booking"
+  New_Booking: "New Booking"
+  about: "About"
+  edit_account: "Edit Account"
+  sign_out: "Sign Out"
+  sign_in: "Sign In"
+  sign_up: "Sign Up"
+  admin: "Admin"
+  users: "Users"
+  start_datetime: "Time"
+  no_of_hours: "Hours"
+  pickup: "Pickup Location"
+  dropff: "Dropoff Location"
+  trip_type: "Trip"
+  helper_class: "Helper Class"
+  total_fee: "Total Fee"
+  server: "Helper"
+  status: "Status"
+  OneWay: "One Way"
+  RoundTrip: "Round Trip"
+  Helper: "Helper"
+  Nurse: "Nurse"
+  listing_booking: "Listing of Bookings"
+  new: "New"
+  
+  activerecord:
+    attributes:
+      booking:
+        start_datetime: "Start Time"
+        location: "Location"
+        status: "Status"
+      user:
+        name: "Name"
+        email: "email"
+        
+  simple_form:
+    labels:
+      defaults:
+        start_datetime: 'Start Time'
+        user: 'Name'
+        hours: 'Hours'
+        pickup_address: "Pickup"
+        dropoff_address: "Dropoff"
+        trip_type: "Trip Type"
+        helper_class: "Helper Class"
+        server: "Server"
+        
+  activerecord:
+    attributes:
+      booking:
+        trip_type:
+          One_Way: "Single"
+          Round: "Round Trip"  
+        helper_class:
+          Helper: "Helper"
+          Nurse: "Nurse"  

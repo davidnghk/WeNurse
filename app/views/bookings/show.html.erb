@@ -1,0 +1,43 @@
+ <div class="authform"> 
+
+<!--   <p>
+    <strong>User:</strong> <%= @booking.user.name %>
+  </p> -->
+  <p>
+<!--    <strong><%= t :start_datetime %>:</strong><%= @booking.start_datetime.to_formatted_s(:short)  %>-->
+    <strong><%= t :start_datetime %>:</strong><%= @booking.start_datetime.strftime("%d/%m/%y %I:%M%P")%>
+  </p>
+  <p>
+    <strong><%= t :no_of_hours %>:</strong> <%= @booking.hours %><%= t :hours %>
+  </p>
+  <p>
+    <strong><%= t :pickup %>:</strong> <%= @booking.pickup_address %>
+  </p>
+  <p>
+    <strong><%= t :dropoff %>:</strong> <%= @booking.dropoff_address %>
+   </p>
+  <p>
+    <strong><%= t :trip_type %>:</strong> <%= t @booking.trip_type %>
+  </p>
+  <p>
+    <strong><%= t :helper_class %>:</strong> <%=  t @booking.helper_class %>
+  </p>
+  <p>
+    <strong><%= t :total_fee %>:</strong> $<%= @booking.total_fee %>
+  </p>
+  <p>
+    <strong><%= t :server %>:<%= @booking.server.name if @booking.server%>
+  </p>
+  <p>
+    <strong><%= t :status %>:</strong>  <%= t @booking.status %>
+  </p>
+
+  <%= link_to edit_booking_path(@booking)  do %>
+    <i class="glyphicon glyphicon-edit"></i>
+  <% end %>
+
+  <%= link_to bookings_path do %>
+    <i class="glyphicon glyphicon-list"></i>
+  <% end %>
+
+</div>

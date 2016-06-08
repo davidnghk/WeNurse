@@ -1,0 +1,21 @@
+
+<div class="container">
+  <%= simple_form_for(@location) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name %>
+
+      <%= f.select(:location_type, Location.location_types.keys.map {|location_type| [location_type.titleize, location_type]}) %>
+      <%= f.select(:district, Location.districts.keys.map {|district| [district.titleize,district]}) %>
+
+      <%= f.input :address_1 %>
+      <%= f.input :address_2 %>
+      <%= f.association :user, as: :hidden %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

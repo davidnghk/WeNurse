@@ -1,0 +1,32 @@
+  <div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Location</h1>
+  <p>
+    <strong>Name:</strong>
+    <%= @location.name %>
+  </p>
+
+  <p>
+    <strong>Location type:</strong>
+    <%= @location.location_type %>
+  </p>
+
+  <p>
+    <strong>District:</strong>
+    <%= @location.district %>
+  </p>
+
+  <p>
+    <strong>Address 1:</strong>
+    <%= @location.address_1 %>
+  </p>
+
+  <p>
+    <strong>Address 2:</strong>
+    <%= @location.address_2 %>
+  </p>
+
+  <%= link_to 'Edit', edit_location_path(@location) %> |
+  <%= link_to 'Back', locations_path %>
+</div>

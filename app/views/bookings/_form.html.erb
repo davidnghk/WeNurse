@@ -1,0 +1,44 @@
+ <div class="authform"> 
+  <%= simple_form_for(@booking) do |f| %>
+
+    <div class="form-inputs">
+
+
+
+      <%= f.input :start_datetime %>
+      <%#= f.input :end_datetime %>
+      <%= f.input :hours, collection: 2..8 %>
+
+      <%= f.input :pickup_address %>
+      <%= f.input :dropoff_address %>
+
+      <!--as: :radio_buttons %>  -->
+
+      <%= f.input :trip_type do %>
+        <%= f.select(:trip_type, Booking.trip_types.keys.map {| trip_type | [trip_type.titleize,trip_type]}) %>
+      <% end %>
+
+      <%= f.input :helper_class do %>
+      <%= f.select(:helper_class, Booking.helper_classes.keys.map {| helper_class | [helper_class.titleize, helper_class]}) %>
+      <% end %>
+      
+      <%= f.association :server, :as => :collection_select, collection: User.staff %>
+      
+      
+      <%= f.select(:status, Booking.statuses.keys.map {|status| [status.titleize,status]}) %>
+    </div>
+    <br>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+
+<%= link_to @booking do %>
+  <i class="glyphicon glyphicon-zoom-in"></i>
+<% end %>
+
+<%= link_to bookings_path do %>
+  <i class="glyphicon glyphicon-list"></i>
+<% end %>
+
+</div>
